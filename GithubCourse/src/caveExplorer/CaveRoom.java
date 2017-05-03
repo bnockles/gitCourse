@@ -1,12 +1,13 @@
 package caveExplorer;
 
-public class CaveRoom {
+public abstract class CaveRoom {
 
-	private String description;
 	private String directions;
 	private String contents;
 	private String defaultContents;
-
+	public static final String defaultActionText ="You gesture about wildly.";
+	public static final String defaultActionOutput ="Nothing happens.";
+	
 	private CaveRoom[] borderingRooms;
 	private Door[] doors; 
 
@@ -16,8 +17,8 @@ public class CaveRoom {
 	public static final int WEST = 3;
 
 
-	public CaveRoom(String description){
-		this.description = description;
+	
+	public CaveRoom(){
 		setDefaultContents(" ");
 		contents = defaultContents;
 		
@@ -46,6 +47,10 @@ public class CaveRoom {
 		}
 	
 	}
+	
+	public final String getDirections(){
+		return directions;
+	}
 
 	public static String toDirection(int dir) {
 		String[] directions = {"the North","the East",
@@ -58,10 +63,20 @@ public class CaveRoom {
 		return contents;
 	}
 	
+	/**
+	 * 
+	 * This code is executed IMMEDIATELY after a CaveRoom is entered. 
+	 * This happens even before the description of the room is printed
+	 * Default sets the contents to 'X' (to represent the presence of a player)
+	 * 
+	 */
 	public void enter(){
 		contents = "X";
 	}
 	
+	/**
+	 * if the door had contents (visible on the map) this icon is restored to contents (replacing the 'X' that represents the location of that player
+	 */
 	public void leave(){
 		contents = defaultContents;
 	}
@@ -71,6 +86,15 @@ public class CaveRoom {
 	}
 	
 
+	/**
+	 * 
+	 * @param direction the direction of the room being added
+	 * @param anotherRoom the room to connect to
+	 * @param door the door that must be passed through to enter the room
+	 * 
+	 * After this method is called, whichever door had previously been in the direction is 
+	 * replaced with another room
+	 */
 	public void addRoom(int direction, CaveRoom anotherRoom, Door door){
 		borderingRooms[direction] = anotherRoom;
 		doors[direction] = door;
@@ -99,10 +123,7 @@ public class CaveRoom {
 	}
 
 	
-	public String getDescription(){
-		return description+directions;
-	}
-
+	public abstract String getDescription();
 	
 
 	
@@ -111,62 +132,81 @@ public class CaveRoom {
 	}
 
 
-	public void setDescription(String string) {
-		description = string;
+
+	
+
+
+
+
+
+	public final CaveRoom getBorderRoom(int index) {
+		return borderingRooms[index];
 	}
 
-	public void interpretInput(String input) {
-		while(!isValid(input)){
-			System.out.println("You can only enter "
-					+ "'w','a','s', or 'd'.");
-			input = CaveExplorer.in.nextLine();
-		}
-		String[] keys = {"w","d","s","a"};
-		int indexFound = -1;
-		for(int i = 0; i < keys.length; i++){
-			if(input.equals(keys[i])){
-				indexFound = i;
-				break;
-			}
-		}
-		goToRoom(indexFound);
+	public String getActionIOutput() {
+		return defaultActionOutput;
 	}
 	
-	public void goToRoom(int direction){
-		if(borderingRooms[direction] != null &&
-				doors[direction].isOpen()){
-			CaveExplorer.currentRoom.leave();
-			CaveExplorer.currentRoom = borderingRooms[direction];
-			CaveExplorer.currentRoom.enter();
-			CaveExplorer.inventory.updateMap();
-		}
+	/**
+	 * 
+	 * @return a String describing the results AFTER pressing the 'J' button
+	 * For example: "return "There is not one to reply to your call.""
+	 */
+	public abstract String getActionJOutput();
+	
+	/**
+	 * 
+	 * @return a String describing the results AFTER pressing the 'K' button
+	 * For example: "return "The monster cowers in fear. You can safely proceed.""
+	 */
+	public abstract String getActionKOutput();
+	
+
+	public String getActionLOutput() {
+		return defaultActionOutput;
+	}
+	
+	public String getActionIDescription() {
+		return defaultActionText;
+	}
+	
+	/**
+	 * 
+	 * @return a String describing what the user "does" when 'J' is entered
+	 * For example: "return "You scream for help.""
+	 */
+	public abstract String getActionJDescription();
+	
+	/**
+	 * 
+	 * @return a String describing what the user "does" when 'K' is entered
+	 * For example "return "You draw your sword...""
+	 */
+	public abstract String getActionKDescription();
+	
+
+	public String getActionLDescription() {
+		return defaultActionText;
 	}
 
-	public boolean isValid(String s){
-		String[] keys = {"w","a","s","d"};
-		for(String key:keys){
-			if (s.equals(key))return true;
-		}
+	/**
+	 * 
+	 * @param index the direction the user wishes to exit through
+	 * @return whether or not the door in the direction 'index' is blocked (i.e. by a monster)
+	 */
+	public boolean exitIsBlocked(int index) {
 		return false;
 	}
 
-	public static void setUpCaves() {
-		CaveExplorer.caves = new CaveRoom[5][5];
-		for(int i = 0; i < CaveExplorer.caves.length; i++){
-			for(int j = 0; j < CaveExplorer.caves[i].length; j++){
-				CaveExplorer.caves[i][j] = new CaveRoom("This cave has coordinates "+i+", "+j);
-			}
-		}
-		CaveExplorer.caves[0][2] = new EventRoom("This is the room"
-				+ " where that guy with a tail met you.",
-				new GameStartEvent());
-		CaveExplorer.currentRoom = CaveExplorer.caves[0][1];
-		CaveExplorer.currentRoom.enter();
-		CaveExplorer.caves[0][1].setConnection(CaveRoom.EAST,CaveExplorer.caves[0][2],new Door());
-		CaveExplorer.caves[0][2].setConnection(CaveRoom.SOUTH,CaveExplorer.caves[1][2],new Door());
-		CaveExplorer.caves[1][2].setConnection(CaveRoom.SOUTH,CaveExplorer.caves[2][2],new Door());
-	}
 	
+	/**
+	 * 
+	 * @param  index the direction the user wishes to exit through
+	 * @return a description of the obstacle blocking the exit
+	 */
+	public String getObstacleDescription(int indexFound) {
+		return "There is nothing in your way in this direction";
+	}
 	
 	
 	

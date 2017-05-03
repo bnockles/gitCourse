@@ -1,6 +1,6 @@
 package caveExplorer;
 
-public class EventRoom extends CaveRoom {
+public class EventRoom extends DefaultRoom {
 
 	private Event event;
 	private boolean eventOccurred;
