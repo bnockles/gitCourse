@@ -9,7 +9,8 @@ public abstract class CaveRoom {
 	public static final String defaultActionOutput ="Nothing happens.";
 	
 	private CaveRoom[] borderingRooms;
-	private Door[] doors; 
+	private Door[] doors;
+	private boolean explored;
 
 	public static final int NORTH = 0;
 	public static final int EAST = 1;
@@ -21,7 +22,7 @@ public abstract class CaveRoom {
 	public CaveRoom(){
 		setDefaultContents(" ");
 		contents = defaultContents;
-		
+		explored = false;
 		borderingRooms = new CaveRoom[4];
 		doors = new Door[4];
 		for(int i = 0 ; i < borderingRooms.length; i++){
@@ -166,21 +167,35 @@ public abstract class CaveRoom {
 		return defaultActionOutput;
 	}
 	
+	public final Door[] getDoors() {
+		int count = 0;
+		for(Door d: doors){
+			if (d!= null) count ++;
+		}
+		Door[] nonNullDoors = new Door[count];
+		count = 0;
+		for(Door d: doors){
+			if (d!= null){ 
+				nonNullDoors[count] = d;
+				count ++;			
+			}
+		}
+		return nonNullDoors;
+	}
+	
 	public String getActionIDescription() {
 		return defaultActionText;
 	}
 	
 	/**
 	 * 
-	 * @return a String describing what the user "does" when 'J' is entered
-	 * For example: "return "You scream for help.""
+	 * @return a String describing what the user "does" when 'J' is entered. For example: "return "You scream for help.""
 	 */
 	public abstract String getActionJDescription();
 	
 	/**
 	 * 
-	 * @return a String describing what the user "does" when 'K' is entered
-	 * For example "return "You draw your sword...""
+	 * @return a String describing what the user "does" when 'K' is entered. For example "return "You draw your sword...""
 	 */
 	public abstract String getActionKDescription();
 	
@@ -207,6 +222,15 @@ public abstract class CaveRoom {
 	public String getObstacleDescription(int indexFound) {
 		return "There is nothing in your way in this direction";
 	}
+
+	public final boolean isExplored() {
+		return explored;
+	}
+
+	public final void setExplored(boolean explored) {
+		this.explored = explored;
+	}
+	
 	
 	
 	
