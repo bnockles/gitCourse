@@ -49,6 +49,9 @@ public class IntermediateRoom extends CaveRoom {
 		//output will be returned regardless of what happens, but value differs
 		String output;
 		if(!treasurePickedUp && !whistleFound){
+			//in Java, this is a 'for-each loop'
+			//it is read as "for each Door, d, in the (array of doors)"
+			//in this application, this loop closes and locks all the doors.
 			for(Door d: getDoors()){
 				d.setOpen(false);
 				d.setLock(true);
@@ -62,11 +65,7 @@ public class IntermediateRoom extends CaveRoom {
 		}else{
 			output = "Unfortunately, your search yields no new discoveries.";
 		}
-		//in Java, this is a 'for-each loop'
-		//it is read as "for each Door, d, in the (array of doors)"
-		//in this application, this loop closes and locks all the doors.
-		//Note that 
-		
+
 		return output;
 	}
 

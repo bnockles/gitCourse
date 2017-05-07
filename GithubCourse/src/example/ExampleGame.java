@@ -12,6 +12,9 @@ import caveExplorer.Inventory;
 
 public class ExampleGame extends CaveExplorer {
 
+	public static ExpertRoomA expertRoomA;
+	public static ExpertRoomB expertRoomB;
+
 	public ExampleGame() {
 		// TODO Auto-generated constructor stub
 	}
@@ -25,7 +28,7 @@ public class ExampleGame extends CaveExplorer {
 		inventory.setMap(true);
 		startExploring();
 	}
-	
+
 	protected static void setUpCaves() {
 		caves = new CaveRoom[3][3];
 		for(int i = 0; i < CaveExplorer.caves.length; i++){
@@ -34,10 +37,14 @@ public class ExampleGame extends CaveExplorer {
 			}
 		}
 
-		
+
 
 		caves[0][2] = new IntermediateRoom();
-		
+		expertRoomA = new ExpertRoomA();
+		caves[1][2] = expertRoomA;
+		expertRoomB = new ExpertRoomB();
+		caves[1][0] = expertRoomB;
+
 		currentRoom = caves[1][1];
 		currentRoom.enter();
 		currentRoom.setExplored(true);

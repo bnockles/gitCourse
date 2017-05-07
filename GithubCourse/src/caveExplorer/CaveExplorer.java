@@ -217,7 +217,7 @@ public class CaveExplorer {
 			currentRoom.enter();
 			currentRoom.setExplored(true);
 			inventory.updateMap();
-		}else if (!door.isOpen() && door.isLocked()){
+		}else if (room != null && !door.isOpen() && door.isLocked()){
 			print("You cann't go out that way because the door is shut and locked. Maybe something in the room can help you open it.");
 			print(" - - Press 'Enter' - -");
 			in.nextLine();
