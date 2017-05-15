@@ -28,13 +28,13 @@ public class HuoRoom extends CaveRoom {
 	@Override
 	public String getActionJDescription() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Dinner!";
 	}
 
 	@Override
 	public String getActionKDescription() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Hi";
 	}
 
 }
