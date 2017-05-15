@@ -2,11 +2,11 @@ package example;
 
 import caveExplorer.CaveRoom;
 
-public class BasicRoom extends CaveRoom {
+public class TofrRoom extends CaveRoom {
 
 	//the basic room has no fields
 	
-	public BasicRoom() {
+	public TofrRoom() {
 		//the constructor in the basic room does nothing
 	}
 
