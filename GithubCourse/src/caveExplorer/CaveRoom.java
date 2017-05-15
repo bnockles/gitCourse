@@ -55,7 +55,7 @@ public abstract class CaveRoom {
 
 	public static String toDirection(int dir) {
 		String[] directions = {"the North","the East",
-				"the South", "the West"};
+				"the South--", "the West"};
 		
 		return directions[dir];
 	}

@@ -2,39 +2,40 @@ package customRooms;
 
 import caveExplorer.CaveRoom;
 
-public class HuoRoom extends CaveRoom {
+public class LynchRoom extends CaveRoom {
 
-	public HuoRoom() {
+	public LynchRoom() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String getDescription() {
-		
-		return "You are now in Huo's room. Welcome!\nPress\'J\' to ask for dinner.\nPress\'K\'to say \"hi\".";
+		// TODO Auto-generated method stub
+		return "Hello2";
 	}
 
 	@Override
 	public String getActionJOutput() {
-		
-		return "Be our guest~ be our guest~Put our service to...(singing, dancing)";
-	} 
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
-	public String getActionKOutput() { 
-		return "Hi";
+	public String getActionKOutput() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public String getActionJDescription() {
 		// TODO Auto-generated method stub
-		return "Dinner!";
+		return null;
 	}
- 
+
 	@Override
 	public String getActionKDescription() {
 		// TODO Auto-generated method stub
-		return "Hi";
+		return null;
 	}
 
 }

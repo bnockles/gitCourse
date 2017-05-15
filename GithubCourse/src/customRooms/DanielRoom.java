@@ -16,7 +16,7 @@ public class DanielRoom extends CaveRoom {
 				+ "Jimmy outlines the date itinerary for Katie: a romantic walk in the underwater park,"
 				+ "an adventure through the binary, catnip forest, and then a special dinner of"
 				+ "Octocat tentacles. Katie looks at you and asks, \"Should I go on the date?\""
-				+ "Should Katie accept the date or not!?";
+				+ "Should Katie accept the date or not!? \n Enter J or K. You will not know which choice you choose";
 	}
 
 	@Override
