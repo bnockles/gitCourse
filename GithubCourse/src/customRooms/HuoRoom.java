@@ -30,7 +30,7 @@ public class HuoRoom extends CaveRoom {
 		// TODO Auto-generated method stub
 		return "Dinner!";
 	}
-
+ 
 	@Override
 	public String getActionKDescription() {
 		// TODO Auto-generated method stub
