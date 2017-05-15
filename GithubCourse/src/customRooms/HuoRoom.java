@@ -18,7 +18,7 @@ public class HuoRoom extends CaveRoom {
 	public String getActionJOutput() {
 		
 		return "Be our guest~ be our guest~Put our service to...(singing, dancing)";
-	}
+	} 
 
 	@Override
 	public String getActionKOutput() { 
