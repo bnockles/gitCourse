@@ -19,7 +19,33 @@ public class EmmanuelRoom extends CaveRoom{
 		String output;
 		
 		if(min<10)
+			output = "It is now " + hour + ":0" + min;
+		else
 			output = "It is now " + hour + ":" + min;
+		
+		return output;
+	}
+	@Override
+	public String getActionKOutput() {
+		return "Testing Emmanuel room1";
+	}
+
+	@Override
+	public String getActionJOutput() {
+		// TODO Auto-generated method stub
+		return "Testing Emmanuel room2";
+	}
+
+	@Override
+	public String getActionJDescription() {
+		// TODO Auto-generated method stub
+		return "Testing Emmanuel room3";
+	}
+
+	@Override
+	public String getActionKDescription() {
+		// TODO Auto-generated method stub
+		return "Testing Emmanuel room4";
 	}
 
 }
