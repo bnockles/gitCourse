@@ -30,7 +30,7 @@ public class DanielRoom extends CaveRoom {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
 	@Override
 	public String getActionJDescription() {
 		// TODO Auto-generated method stub
