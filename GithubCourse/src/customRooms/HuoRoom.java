@@ -21,7 +21,7 @@ public class HuoRoom extends CaveRoom {
 	}
 
 	@Override
-	public String getActionKOutput() {
+	public String getActionKOutput() { 
 		return "Hi";
 	}
 
