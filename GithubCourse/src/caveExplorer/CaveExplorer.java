@@ -3,6 +3,9 @@ package caveExplorer;
 
 import java.util.Scanner;
 
+import customRooms.*;
+
+
 public class CaveExplorer {
 
 	public static CaveRoom[][] caves;
@@ -12,19 +15,19 @@ public class CaveExplorer {
 	public static boolean win;
 	public static boolean exploring;
 	
-//	public static YuliaRoom yuliaRoom;
-//	public static ChristaRoom christaRoom;
-//	public static DanelRoom danielRoom;
-//	public static HuoRoom huoRoom;
-//	public static RobertRoom robertRoom;
-//	public static ArendRoom arentRoom;
-//	public static ShaunaRoom shuanaRoom;
-//	public static EmmanuelRoom emmanuelRoom;
-//	public static BrownRoom brownRoom;
-//	public static EricRoom ericRoom;
-//	public static AndrewRoom andrewRoom;
-//	public static CorrineRoom corrineRoom;
-//	public static LynchRoom lynchRoom;
+	public static YuliaRoom yuliaRoom;
+	public static ChristaRoom christaRoom;
+	public static DanielRoom danielRoom;
+	public static HuoRoom huoRoom;
+	public static RobertRoom robertRoom;
+	public static ArendRoom arentRoom;
+	public static ShaunaRoom shuanaRoom;
+	public static EmmanuelRoom emmanuelRoom;
+	public static BrownRoom brownRoom;
+	public static EricRoom ericRoom;
+	public static AndrewRoom andrewRoom;
+	public static CorinneRoom corrineRoom;
+	public static LynchRoom lynchRoom;
 
 	
 	public static void main(String[] args){
