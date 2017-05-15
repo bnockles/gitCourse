@@ -19,7 +19,6 @@ public class DanielRoom extends CaveRoom {
 				+ "Should Katie accept the date or not!? \n Enter J or K. You will not know which choice you choose";
 	}
 
-	
 	@Override
 	public String getActionJOutput() {
 		// TODO Auto-generated method stub
