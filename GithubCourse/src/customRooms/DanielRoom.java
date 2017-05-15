@@ -28,7 +28,7 @@ public class DanielRoom extends CaveRoom {
 	@Override
 	public String getActionKOutput() {
 		// TODO Auto-generated method stub
-		return null;
+		return "You saved Katie from Octocat cannibalist Jimmy!";
 	}
 	
 	@Override
@@ -40,7 +40,7 @@ public class DanielRoom extends CaveRoom {
 	@Override
 	public String getActionKDescription() {
 		// TODO Auto-generated method stub
-		return "You saved Katie from Octocat cannibalist Jimmy! You are a hero! Not only do you feel"
+		return "You are a hero! Not only do you feel"
 				+ "good about yourself, but you also get an ice cream cake to celebrate..."
 				+ "But then Daniel ate it, so you get nothing but good feelings :)";
 	}
