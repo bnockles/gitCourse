@@ -19,12 +19,12 @@ public class CaveExplorer {
 	public static ChristaRoom christaRoom;
 	public static DanielRoom danielRoom;
 	public static HuoRoom huoRoom;
-	public static RobertRoom robertRoom;
-	public static ArendRoom arentRoom;
-	public static ShaunaRoom shuanaRoom;
+//	public static RobertRoom robertRoom;
+	public static ArendRoom arendRoom;
+//	public static ShanuaRoom shuanaRoom;
 	public static EmmanuelRoom emmanuelRoom;
-	public static BrownRoom brownRoom;
-	public static EricRoom ericRoom;
+	public static TofrRoom brownRoom;
+//	public static EricRoom ericRoom;
 	public static AndrewRoom andrewRoom;
 	public static CorinneRoom corrineRoom;
 	public static LynchRoom lynchRoom;
@@ -39,7 +39,7 @@ public class CaveExplorer {
 		startExploring();
 	}
 
-	private CaveRoom assignRoom(CaveRoom room, int r, int c){
+	private static CaveRoom assignRoom(CaveRoom room, int r, int c){
 		caves[r][c] = room;
 		return room;
 	}
@@ -51,23 +51,22 @@ public class CaveExplorer {
 				CaveExplorer.caves[i][j] = new DefaultRoom("This cave has coordinates "+i+", "+j);
 			}
 		}
-//		yuliaRoom = assignRoom(new YuliaRoom(),0,0);
+		yuliaRoom = (YuliaRoom) assignRoom(new YuliaRoom(),0,0);
 		caves[0][1] = new EventRoom("This is the room"
 				+ " where that creepy octopus-cat thing met you.",
 				new GameStartEvent());
-//		christaRoom = assignRoom(new ChristaRoom(),0,2);
-//		danielRoom = assignRoom(new DanielRoom(),0,3);
-//		arendRoom = assignRoom(new ArendRoom(),1,0);
-		//start room
+		christaRoom = (ChristaRoom) assignRoom(new ChristaRoom(),0,2);
+		danielRoom = (DanielRoom) assignRoom(new DanielRoom(),0,3);
+		arendRoom = (ArendRoom) assignRoom(new ArendRoom(),1,0);
 //		robertRoom = assignRoom(new RobertRoom(),1,2);
-//		huoRoom = assignRoom(new HuoRoom(),1,3);
+		huoRoom = (HuoRoom) assignRoom(new HuoRoom(),1,3);
 //		shaunaRoom = assignRoom(new ShaunaRoom(),2,0);
-//		emmanuelRoom = assignRoom(new EmmanuelRoom(),2,1);
-//		brownRoom = assignRoom(new BrownRoom(),2,2);
+		emmanuelRoom = (EmmanuelRoom) assignRoom(new EmmanuelRoom(),2,1);
+		brownRoom = (TofrRoom) assignRoom(new TofrRoom(),2,2);
 //		ericRoom = assignRoom(new EricRoom(),2,3);
-//		lynchRoom = assignRoom(new LynchRoom(),3,0);
-//		corinneRoom = assignRoom(new CorinneRoom(),3,1);
-//		andrewRoom = assignRoom(new AndrewRoom(),3,2);
+		lynchRoom = (LynchRoom) assignRoom(new LynchRoom(),3,0);
+		corrineRoom = (CorinneRoom) assignRoom(new CorinneRoom(),3,1);
+		andrewRoom = (AndrewRoom) assignRoom(new AndrewRoom(),3,2);
 
 
 		
@@ -102,6 +101,7 @@ public class CaveExplorer {
 	
 	public static void print(String s){
 		String newline = System.getProperty("line.separator");
+		if(s!= null){
 		String[] words = s.split(" ");
 		int limit = 80;
 		String toPrint = "";
@@ -123,6 +123,9 @@ public class CaveExplorer {
 		line = "";
 		}
 		System.out.println(toPrint);
+		}else{
+			System.out.println("The author of this room did not write a description for what happens when you do that.");
+		}
 	}
 	
 	protected static void startExploring() {
