@@ -63,7 +63,7 @@ public class CaveExplorer {
 //		shaunaRoom = assignRoom(new ShaunaRoom(),2,0);
 		emmanuelRoom = (EmmanuelRoom) assignRoom(new EmmanuelRoom(),2,1);
 		brownRoom = (TofrRoom) assignRoom(new TofrRoom(),2,2);
-//		ericRoom = assignRoom(new EricRoom(),2,3);
+ 		ericRoom = assignRoom(new EricRoom(),2,3);
 		lynchRoom = (LynchRoom) assignRoom(new LynchRoom(),3,0);
 		corrineRoom = (CorinneRoom) assignRoom(new CorinneRoom(),3,1);
 		andrewRoom = (AndrewRoom) assignRoom(new AndrewRoom(),3,2);
