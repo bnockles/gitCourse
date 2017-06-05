@@ -57,7 +57,7 @@ public class EmmanuelRoom extends CaveRoom{
 		today = new Date();
 		int hour = today.getHours()%12;
 		int min = today.getMinutes();
-		String output;
+		String output="";
 		
 		int month = today.getMonth()+1;
 		int date = today.getDate();

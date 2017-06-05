@@ -41,7 +41,7 @@ public class ChristaRoom extends CaveRoom {
 		// TODO Auto-generated method stub
 		return "Press K to climb down the ladder of the \n"
 				+ "bell tower, walk out of the church and drive away from the town \n"
-				+ "without warning the residents of the imminent danger. YOLO";
+				+ "WITHOUT warning the residents of the imminent danger. YOLO";
 	}
 
 }

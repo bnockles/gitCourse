@@ -67,7 +67,9 @@ public class CaveExplorer {
 		lynchRoom = (LynchRoom) assignRoom(new LynchRoom(),3,0);
 		corrineRoom = (CorinneRoom) assignRoom(new CorinneRoom(),3,1);
 		andrewRoom = (AndrewRoom) assignRoom(new AndrewRoom(),3,2);
+
 		expertRoomA = (ExpertRoomA) assignRoom( new ExpertRoomA() , 2,3);
+
 		
 		//This is how to test a room, comment out when done
 		//caves[0][1] = emmanuelRoom;
