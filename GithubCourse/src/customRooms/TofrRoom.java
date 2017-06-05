@@ -3,10 +3,11 @@ package customRooms;
 import caveExplorer.CaveRoom;
 
 public class TofrRoom extends CaveRoom {
-
+ 
     //the basic room has no fields
 	
     public TofrRoom() {
+	System.out.println("i am teh KONSTRUCTOR!!!");
 	//the constructor in the basic room does nothing
     }
 
@@ -20,9 +21,7 @@ public class TofrRoom extends CaveRoom {
 	//     \n
 	//creates a new line when displayed in-game
 	//I use the 'newline character' to visually separate the movement choices.
-	return "A cavernous space dimly lit by torches mounted on the walls. This room smells musty. "
-	    + "You wonder how long it has been since someone last arrived.\n   Enter 'J' to yell aloud.\n
-HOOTIE HOOOOOO!!!!\n   Enter 'K' to stomp on the ground";
+	return "A cavernous space dimly lit by torches mounted on the walls. This room smells musty. " + "You wonder how long it has been since someone last arrived.\n   Enter 'J' to yell aloud.\n HOOTIE HOOOOOO!!!!\n   Enter 'K' to stomp on the ground";
     }
 
     /**
