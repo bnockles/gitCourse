@@ -19,7 +19,7 @@ public class AndrewRoom extends CaveRoom {
 	@Override
 	public String getActionJOutput() {
 		// TODO Auto-generated method stub
-		return "Great job - you survived and your legs are burning!";
+		return "Great job - you survived and your legs are burning! You're a beast!";
 	}
 
 	@Override
