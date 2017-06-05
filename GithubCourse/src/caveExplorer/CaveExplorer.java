@@ -48,7 +48,7 @@ public class CaveExplorer {
 		CaveExplorer.caves = new CaveRoom[4][4];
 		for(int i = 0; i < CaveExplorer.caves.length; i++){
 			for(int j = 0; j < CaveExplorer.caves[i].length; j++){
-				CaveExplorer.caves[i][j] = new DefaultRoom("This cave has coordinates "+i+", "+j);
+				CaveExplorer.caves[i][j] = new DefaultRoom("This place is here, man! " +i+", "+j);
 			}
 		}
 		yuliaRoom = (YuliaRoom) assignRoom(new YuliaRoom(),0,0);
