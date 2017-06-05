@@ -11,14 +11,19 @@ public class ChristaRoom extends CaveRoom {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return "You are in a dusty bell tower in an empty church in a small, desolate town on the northern border of New Mexico. You have been warned of a dangerous \n"
-				+ "pod of octokitties approaching. You have climbed up to the bell tower to warn the residents of the town about this terrible problem, but you realize \n"
-				+ "that if you ring the bell, you might not make it out of the tower and into your car in time to leave the town before the octokitties find you. \n"
-				+"Press J to ring the bell and call the town's residents \n"
-				+ "into the town square in order to warn them of the pod of attack octokitties approaching.\n"
-				+ "Press K to climb down the ladder of the \n"
-				+ "bell tower, walk out of the church and drive away from the town \n"
-				+ "WITHOUT warning the residents of the imminent danger. YOLO";
+		return "     You are in a dusty bell tower in an empty church in a small, desolate town on the northern border of New Mexico. You have been warned of a dangerous \n"
+				+ "     pod of octokitties approaching. You have climbed up to the bell tower to warn the residents of the town about this terrible problem, but you realize \n"
+				+ "     that if you ring the bell, you might not make it out of the tower and into your car in time to leave the town before the octokitties find you. \n"
+				+"\n"
+				+ "\n"
+				+"     ----------------"
+				+ "    Press J to ring the bell and call the town's residents \n"
+				+ "    into the town square in order to warn them of the pod of attack octokitties approaching.\n"
+				+ "\n"
+				+"     ----------------"
+				+ "     Press K to climb down the ladder of the \n"
+				+ "     bell tower, walk out of the church and drive away from the town \n"
+				+ "     WITHOUT warning the residents of the imminent danger. YOLO";
 	}
 
 	@Override
