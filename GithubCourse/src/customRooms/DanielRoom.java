@@ -22,7 +22,7 @@ public class DanielRoom extends CaveRoom {
 	@Override
 	public String getActionJOutput() {
 		// TODO Auto-generated method stub
-		return "You chose yes. Thus, you are okay with Octocat cannibalism.";
+		return "You are okay with Octocat cannibalism.";
 	}
 
 	@Override
