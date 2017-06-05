@@ -22,7 +22,7 @@ public class HuoRoom extends CaveRoom {
 
 	@Override
 	public String getActionKOutput() { 
-		return "Hi";
+		return "Hi~~~~~~~~~";
 	}
 
 	@Override
