@@ -11,7 +11,7 @@ public class LynchRoom extends CaveRoom {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return "Hello2";
+		return "Hello, This is Chris L.";
 	}
 
 	@Override
