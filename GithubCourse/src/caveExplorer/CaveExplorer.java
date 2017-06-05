@@ -68,8 +68,8 @@ public class CaveExplorer {
 		corrineRoom = (CorinneRoom) assignRoom(new CorinneRoom(),3,1);
 		andrewRoom = (AndrewRoom) assignRoom(new AndrewRoom(),3,2);
 
-
-		
+		//This is how to test a room, comment out when done
+		caves[0][1] = emmanuelRoom;
 		
 		currentRoom = caves[1][1];
 		currentRoom.enter();

@@ -23,6 +23,10 @@ public class EmmanuelRoom extends CaveRoom{
 		else
 			output = "It is now " + hour + ":" + min;
 		
+		int month = today.getMonth();
+		int date = today.getDate();
+		int 
+		
 		return output;
 	}
 	@Override
