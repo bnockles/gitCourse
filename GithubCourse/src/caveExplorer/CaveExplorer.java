@@ -69,7 +69,7 @@ public class CaveExplorer {
 		andrewRoom = (AndrewRoom) assignRoom(new AndrewRoom(),3,2);
 
 		//note to self: for testing, change this room
-		caves[0][1] = huoRoom;
+		caves[1][1] = huoRoom;
 		
 		
 		currentRoom = caves[1][1];
