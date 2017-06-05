@@ -70,7 +70,7 @@ public class CaveExplorer {
 
 		//NOTE TO SELF: FOR TESTING, CHANGE THIS ROOM:
 		caves[0][1] = christaRoom;
-		//note
+		//note from me
 		
 		
 		currentRoom = caves[1][1];
