@@ -4,7 +4,7 @@ package caveExplorer;
 import java.util.Scanner;
 
 import customRooms.*;
-
+import example.*;
 
 public class CaveExplorer {
 
@@ -28,7 +28,7 @@ public class CaveExplorer {
 	public static AndrewRoom andrewRoom;
 	public static CorinneRoom corrineRoom;
 	public static LynchRoom lynchRoom;
-
+	public static ExpertRoomA expertRoomA;
 	
 	public static void main(String[] args){
 		in = new Scanner(System.in);
@@ -67,9 +67,10 @@ public class CaveExplorer {
 		lynchRoom = (LynchRoom) assignRoom(new LynchRoom(),3,0);
 		corrineRoom = (CorinneRoom) assignRoom(new CorinneRoom(),3,1);
 		andrewRoom = (AndrewRoom) assignRoom(new AndrewRoom(),3,2);
-
+		expertRoomA = (ExpertRoomA) assignRoom( new ExpertRoomA() , 2,3);
+		
 		//This is how to test a room, comment out when done
-		caves[0][1] = emmanuelRoom;
+		//caves[0][1] = emmanuelRoom;
 		
 		currentRoom = caves[1][1];
 		currentRoom.enter();
