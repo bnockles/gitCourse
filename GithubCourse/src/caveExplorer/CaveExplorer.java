@@ -28,6 +28,7 @@ public class CaveExplorer {
 	public static AndrewRoom andrewRoom;
 	public static CorinneRoom corrineRoom;
 	public static LynchRoom lynchRoom;
+	public static EmmaRoom emmaRoom;
 
 	
 	public static void main(String[] args){
@@ -67,10 +68,12 @@ public class CaveExplorer {
 		lynchRoom = (LynchRoom) assignRoom(new LynchRoom(),3,0);
 		corrineRoom = (CorinneRoom) assignRoom(new CorinneRoom(),3,1);
 		andrewRoom = (AndrewRoom) assignRoom(new AndrewRoom(),3,2);
-
-//NOTE: for testing, put desired room here
-		caves[0][1]=christaRoom;
+		emmaRoom = (EmmaRoom) assignRoom(new EmmaRoom(),0,1);
 		
+//NOTE: for testing, put desired room here
+		//caves[0][1]=brownRoom;
+		
+	
 		
 		currentRoom = caves[1][1];
 		currentRoom.enter();

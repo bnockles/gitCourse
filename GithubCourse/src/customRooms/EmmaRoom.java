@@ -11,7 +11,7 @@ public class EmmaRoom extends CaveRoom {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return "You have entered a large, well-lit room.  Is this really a cave?";
+		return "You have entered a large, well-lit room.  Is this really a cave?  Press 'j' to say hello.  Press 'k' to jump.";
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class EmmaRoom extends CaveRoom {
 	@Override
 	public String getActionJDescription() {
 		// TODO Auto-generated method stub
-		return "What's going on?";
+		return "You call out 'hello? is anyone there?'";
 	}
 
 	@Override
